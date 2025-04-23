@@ -7,6 +7,7 @@ int main() {
     int numPontosTuristicos1, numPontosTuristicos2;
     float area1, pib1, area2, pib2;
     float densidade1, pibPerCapita1, densidade2, pibPerCapita2;
+    float superPoder1, superPoder2;
 
     // Exibe o label "Carta 1:"
     printf("Carta 1:\n");
@@ -41,6 +42,8 @@ int main() {
     // Cálculos da carta 1
     densidade1 = populacao1 / area1;
     pibPerCapita1 = pib1 / populacao1;
+    // Cálculo do super poder (soma de todos os atributos numéricos + inverso da densidade)
+    superPoder1 = populacao1 + area1 + pib1 + numPontosTuristicos1 + pibPerCapita1 + (1.0/densidade1);
 
     // Carta 2
     printf("\nCarta 2:\n");
@@ -73,6 +76,8 @@ int main() {
     // Cálculos da carta 2
     densidade2 = populacao2 / area2;
     pibPerCapita2 = pib2 / populacao2;
+    // Cálculo do super poder (soma de todos os atributos numéricos + inverso da densidade)
+    superPoder2 = populacao2 + area2 + pib2 + numPontosTuristicos2 + pibPerCapita2 + (1.0/densidade2);
 
     // Exibindo os dados coletados das duas cartas
     printf("\n=== Dados das Cartas ===\n");
@@ -87,6 +92,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos1);
     printf("Densidade Demográfica: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f\n", pibPerCapita1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -98,6 +104,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos2);
     printf("Densidade Demográfica: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f\n", pibPerCapita2);
+    printf("Super Poder: %.2f\n", superPoder2);
 
     return 0;
 }
